@@ -84,7 +84,7 @@ Breakpoints in use are **1920, 1440 and Mobile (375)**.
 | **No typography scale** on the style guide | PMs and devs cannot choose "the right" text size; each screen drifts. |
 | **No spacing, radius, elevation or grid** | Layouts can't be checked against rules; there are no tokens for code. |
 | **No semantic status colors** (error, success, warning, info) on the color sheet, though error modals and status badges use them | Colors get picked by eye; code gets hex values. |
-| Colors are **swatches, not variables** (not verified; to confirm once access is restored) | Nothing binds components to tokens, so a PM can recolor anything. |
+| Colors **are** variables and styles, but **remote, unstructured and duplicated** (see [research 03](03-style-guide-values.md)) | There are no semantic roles and no scopes, so a PM can still pick any color. |
 | **78 variants are unnamed** (`Property 1=Variant3`…), and properties are all `Property 1` | PMs can't tell which variant to use; Code Connect mapping is impossible. |
 | States are mixed into one property (`Hover`, `Disabled`, `with icon`, `md`) | Size, state and content should be separate properties so they can't be combined wrongly. |
 | Typos in names (`Seconed`, `Defualt`, `passowed`, `erorr`, `Dekstop`, `linsk`) | Low trust; search in the assets panel fails. |

@@ -4,7 +4,8 @@
 | --- | --- | --- | --- |
 | **Selfie DS** (library) | `Cw9hFppHvySISBjlf6mPQ1` | Alex's team (Pro), Full seat | The governed library (ADR-003). [Open](https://www.figma.com/design/Cw9hFppHvySISBjlf6mPQ1) |
 | Agents 2024 | `IRm41Dz9ZBJrreevPjOHft` | Studio org | Original studio file; Style Guide page `2795:37719` |
-| Agents 2024 (Copy) | `SbfJlYYYcUeeVcuFYdSMMp` | Codeoasis org (View seat only) | Reference copy. Needs moving to Alex's team to be readable through the MCP |
+| **Agents 2024 – Style Guide reference** | `HkFARygJ81iAzHzgmociTj` | Alex's team (Pro), Full seat | The Style Guide page pasted in, readable through the MCP. See [research 03](research/03-style-guide-values.md). [Open](https://www.figma.com/design/HkFARygJ81iAzHzgmociTj) |
+| Agents 2024 (Copy) | `SbfJlYYYcUeeVcuFYdSMMp` | Codeoasis org (View seat only) | Old copy (also `OQchmE4dnHADfK3JA8Z897`), not readable through the MCP |
 
 ## Library pages
 
