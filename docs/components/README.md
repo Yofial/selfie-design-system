@@ -36,8 +36,20 @@ General rules:
 | [Mobile menu](#sidebar) | `Mobile menu` (26:318) | — | — |
 | [Bottom navigation](#bottom-navigation) | `Bottom navigation` (27:267) + `Bottom nav item` (27:266) | — | Label, Icon |
 | Logo / Selfie360 | `Logo` (23:41, Brand / White), `Selfie360 wordmark` (23:42) on 🎨 Foundations | Color = 2 | — |
+| [Icon button](#icon-button) | `Icon button` (29:185) | Variant × State = 8 | Icon |
 | Slot | `Slot` on 🎨 Foundations › Utilities (15:13) | — | placeholder to swap for content |
-| Icons | `icon/*` on 🎨 Foundations (7:2, 23:48) | — | chevron-down, chevron-left (points left = RTL forward), chevron-right, close, search, calendar, external-link, bell, actions, menu; sidebar 21px: nav/digital, nav/systems, nav/school, nav/forms, nav/support |
+| **Patterns (🧱 Patterns page)** | | | |
+| [Filter bar](#filter-bar) | `Filter bar` (29:319) | Variant = Desktop / Desktop filled / Mobile | fields exposed |
+| [Search results](#search-results) | `Search results` (30:100) + `Search result item` (30:99) | State = 2 | Count, Show footer; Icon |
+| [Data table](#data-table) | `Data table` (31:210) + `Table header cell` (31:115), `Table cell` (31:142), `Table row` (31:209) | Cell Type = 5; Row State = 3 | rows/cells exposed, Show pagination |
+| [Empty state](#empty-and-loading) | `Empty state` (32:306) | — | Title, Text, Illustration, Show action |
+| [Skeleton](#empty-and-loading) | `Skeleton` (32:319) | Shape = Line / Circle / Block | — |
+| [Chart parts](#charts) | `Legend item` (34:331), `Bar` (34:350), `Progress bar` (34:363), `Donut chart` (34:364), `KPI` (34:372) | Series × Value | Label, Value/Amount |
+| [Chart card](#dashboard-widgets) | `Chart card` (42:307) | — | — |
+| [Recent actions](#dashboard-widgets) | `Recent actions` (42:380) + `Activity item` (42:374) | — | Title; Action, Reference, Date |
+| [Data field](#domain-examples) | `Data field` (42:429) | — | Label, Value |
+| [Policy row](#domain-examples) | `Policy row` (42:494) | State = Collapsed / Expanded | Product, Show status |
+| Icons | `icon/*` on 🎨 Foundations (7:2, 23:48) | — | chevron-down, chevron-up, chevron-left (points left = RTL forward), chevron-right, close, search, calendar, external-link, bell, actions, menu; sidebar 21px: nav/digital, nav/systems, nav/school, nav/forms, nav/support |
 
 ## Button
 
@@ -201,3 +213,57 @@ New tokens `color/nav/*`. Studio's `#8C8CA9` sub-item hover was darkened to `#6E
 ## Bottom navigation
 
 A sticky white bar at the bottom of mobile screens. Today it has one entry, "פעולות" (actions), which opens the actions Bottom sheet. Each entry is a label plus a 32px icon circle; Active is purple. More entries are a studio decision (max 4).
+
+## Icon button
+
+A round 32px button with one icon. Primary is yellow (counts as the view's one primary), Secondary is outlined; states Default, Hover, Focus, Disabled. It always needs an accessible name and, on desktop, a Tooltip.
+
+# Patterns (🧱 Patterns page)
+
+Patterns are built only from primitives (ADR-011). Product-specific screen pieces become Templates.
+
+## Filter bar
+
+- **Desktop:** one row of underline **Fields** (date, ID, policy number, select…) and a yellow search **Icon button**. Once any value is set, the "ניקוי סינון" (clear) link appears.
+- **Mobile:** stacked fields (shown in a Bottom sheet) with a "סינון (n)" (filter) button, where n is the number of active filters, and a clear link.
+- At most ~5 fields. More than that needs an advanced filter, which is a studio decision.
+
+## Search results
+
+A panel under a Search field: a result count, up to ~6 **Search result item**s, and an optional "לכל התוצאות" (all results). Each item shows an entity icon and fields separated by " | ". **The part that matches the query is bold purple.** For no results, show "לא נמצאו תוצאות עבור …" (no results for …).
+
+## Data table
+
+| Part | Rules |
+| --- | --- |
+| Header cell | 14 bold on `bg/subtle`; a sort arrow only on the sorted column |
+| Cell types | **Text**; **Number** (amounts, IDs, dates: start-aligned, LTR, tabular figures); **Badge** (status); **Link** (row action); **Expand** (first column of an expandable row) |
+| Row states | Default; Hover `bg/subtle`; Selected `bg/selected`; rows divided by `border/divider` |
+| Table | Header row + rows + Pagination, filling its container. Put a Filter bar above it. Use the Empty state when there's no data and Skeleton rows while loading. On mobile use list cards, not tables |
+
+## Empty and loading
+
+- **Empty state:** illustration (slot), title, one line saying what will appear here, and an optional action, shown only when the user can create the data. It is not for errors.
+- **Skeleton:** Line, Circle or Block in `bg/muted`, shaped like the content that's coming. Use it for loads over ~300ms. In code it pulses gently, and the pulse turns off under reduced motion.
+
+## Charts
+
+Colors come only from `color/chart/1–6` in that order, plus `chart/track` (ADR-011). Every bar or segment has a text label or value.
+
+- **Bar**: Series (color) × **Value** (20–100% of the chart height). PMs pick values from a list; in code, values come from data.
+- **Progress bar**: Series × **Value** (20–100%), with a label and amount. It fills from the right.
+- **Donut chart**: up to 6 segments with the total in the center, always with a Legend. The segment angles in Figma are illustrative.
+- **Legend item**: colored dot, label, optional value.
+- **KPI**: label, a big number (32 bold), unit.
+
+## Dashboard widgets
+
+- **Chart card** (example: "פרמיות לגביה", premiums to collect): KPI, a period switch (Segmented control), a bar chart with Y-axis on the left, and a legend with values.
+- **Recent actions**: title, a "פעולות נוספות" (more actions) link, and up to 6 **Activity item**s (action | reference, date). The same pattern serves "updates" and "links" widgets. Empty uses Empty state; loading uses Skeleton.
+
+## Domain examples
+
+These are built only from library parts to prove the blocks work.
+
+- **Data field**: a read-only label above its value, for record details.
+- **Policy row** (customer image): product name, a risk/status Badge, 4 Data fields, and an expand Icon button. When expanded, the details area is a Slot for the product's detail blocks.

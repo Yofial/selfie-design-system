@@ -18,7 +18,8 @@
     "color/bg/overlay": "VariableID:15:3",
     "color/border/input": "(Color)",
     "color/nav/*": "bg, item-hover, subitem-hover, item-active (Color)",
-    "color/ink/700, ink/650": "(Primitives)"
+    "color/ink/700, ink/650": "(Primitives)",
+    "color/chart/*": "1–6, track (Color) + chart primitives"
   },
   "components": {
     "Icons section": "7:2",
@@ -101,7 +102,36 @@
     "Mobile menu": "26:318",
     "Bottom navigation section": "27:253",
     "Bottom nav item": "27:266",
-    "Bottom navigation": "27:267"
+    "Bottom navigation": "27:267",
+    "Icon button section": "29:160",
+    "Icon button": "29:185",
+    "icon/chevron-up": "39:470",
+    "Filter bar section": "29:186",
+    "Filter bar": "29:319",
+    "Search results section": "30:90",
+    "Search result item": "30:99",
+    "Search results": "30:100",
+    "Data table section": "31:106",
+    "Table header cell": "31:115",
+    "Table cell": "31:142",
+    "Table row": "31:209",
+    "Data table": "31:210",
+    "States section": "32:305",
+    "Empty state": "32:306",
+    "Skeleton": "32:319",
+    "Chart parts section": "34:306",
+    "Legend item": "34:331",
+    "Bar": "34:350",
+    "Progress bar": "34:363",
+    "Donut chart": "34:364",
+    "KPI": "34:372",
+    "Dashboard widgets section": "42:306",
+    "Chart card": "42:307",
+    "Activity item": "42:374",
+    "Recent actions": "42:380",
+    "Domain examples section": "42:428",
+    "Data field": "42:429",
+    "Policy row": "42:494"
   },
   "tempFont": "Assistant (swap to SimplerPro when available)"
 }
