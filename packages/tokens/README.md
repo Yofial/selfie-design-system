@@ -37,7 +37,7 @@ pnpm tokens:figma     # → dist/figma/sync.plugin.js
 
 ```css
 @import '@selfie-ds/tokens/css';
-@import '@selfie-ds/tokens/dist/css/text.css';
+@import '@selfie-ds/tokens/text.css';
 
 .card {
   background: var(--sds-color-bg-surface);

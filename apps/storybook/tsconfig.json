@@ -1,0 +1,5 @@
+{
+  "extends": "../../packages/react/tsconfig.json",
+  "compilerOptions": { "types": [] },
+  "include": [".storybook", "src"]
+}

@@ -1,0 +1,113 @@
+/* Figma Field: label 14/20, input row 16/24 with an 8px gap above the line, helper 12/20, gap 4. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-space-4);
+  inline-size: 100%;
+}
+
+.label {
+  font: var(--sds-text-body-regular);
+  line-height: 20px;
+  color: var(--sds-color-text-secondary);
+}
+
+.hiddenLabel {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: var(--sds-space-8);
+  padding-block-end: var(--sds-space-8);
+  border-block-end: 1px solid var(--sds-color-border-field);
+}
+
+.input {
+  flex: 1;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: var(--sds-text-body-lg-regular);
+  color: var(--sds-color-text-primary);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--sds-color-text-placeholder);
+  opacity: 1;
+}
+
+.icon {
+  flex: none;
+  color: var(--sds-color-icon-default);
+}
+
+.message {
+  margin: 0;
+  font: var(--sds-text-caption-regular);
+  color: var(--sds-color-text-secondary);
+}
+
+/* Focus: a 2px line (the second pixel is an inset shadow, so the layout doesn't move). */
+.field:focus-within .control {
+  border-block-end-color: var(--sds-color-border-focus);
+  box-shadow: inset 0 -1px 0 0 var(--sds-color-border-focus);
+}
+
+.field:focus-within .label {
+  color: var(--sds-color-text-link);
+}
+
+.field:focus-within .icon {
+  color: var(--sds-color-icon-accent);
+}
+
+/* Error */
+.field[data-state='error'] .control {
+  border-block-end-color: var(--sds-color-border-error);
+}
+
+.field[data-state='error'] .icon {
+  color: var(--sds-color-icon-error);
+}
+
+.field[data-state='error'] .message {
+  color: var(--sds-color-text-error);
+}
+
+/* Disabled: dashed line, everything in text/disabled. */
+.field[data-state='disabled'] .control {
+  border-block-end-style: dashed;
+}
+
+.field[data-state='disabled'] :is(.label, .input, .icon, .message),
+.field[data-state='disabled'] .input::placeholder {
+  color: var(--sds-color-text-disabled);
+}
+
+.field[data-state='disabled'] .input {
+  cursor: not-allowed;
+}
+
+/* Read-only: displays data. No line, no icon. */
+.field[data-state='readonly'] .control {
+  border-block-end-color: transparent;
+}
+
+.field[data-state='readonly']:focus-within .control {
+  border-block-end-color: transparent;
+  box-shadow: none;
+}
+
+.field[data-state='readonly']:focus-within .label {
+  color: var(--sds-color-text-secondary);
+}

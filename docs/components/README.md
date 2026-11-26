@@ -1,6 +1,6 @@
 # Components
 
-Each component exists in the Figma library *Selfie DS* (page 🧩 Primitives), and later in `@selfie-ds/react`. Both expose **the same properties**, so a Figma frame and the code read the same way.
+Each component exists in the Figma library *Selfie DS* (page 🧩 Primitives) and, as it is built, in [`@selfie-ds/react`](../../packages/react/README.md). In code so far: Button, Link button, Icon button, Field, Checkbox, Radio group, Icon. Both expose **the same properties**, so a Figma frame and the code read the same way.
 
 General rules:
 - Use only library components. Don't detach instances or recolor them. If a component is missing, it's a request to the studio.

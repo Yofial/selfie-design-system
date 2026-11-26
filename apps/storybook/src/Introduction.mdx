@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+# Selfie Design System
+
+React components for **Selfie** (סלפי), Menora's agents portal. Each component matches its
+Figma counterpart in the *Selfie DS* library: same name, same properties.
+
+## Install and use
+
+```tsx
+import '@selfie-ds/tokens/css';        // token variables (--sds-*)
+import '@selfie-ds/react/styles.css';  // component styles
+import { Button, Field } from '@selfie-ds/react';
+
+<html dir="rtl" lang="he">
+```
+
+## Rules
+
+- Use library components. If one is missing, it is a request to the studio, not a local copy.
+- Style your own layout only with semantic tokens: `--sds-color-text-*`, `bg-*`, `border-*`, `icon-*`,
+  `--sds-space-*`, `--sds-radius-*`, `--sds-text-*`. Never a hex value or a primitive (`--sds-color-ink-900`).
+- RTL first: use logical properties (`margin-inline-start`, `inset-inline-end`), never `left`/`right`.
+- One **primary** button per view.
+
+The toolbar's **Direction** switch shows LTR, to check mirroring. The **Accessibility** panel runs axe on each story.
+
+**Font:** Storybook uses *Assistant* (as Figma does) until SimplerPro is available; sizes and line heights are already SimplerPro's.

@@ -1,0 +1,11 @@
+:root {
+  /* Temporary: SimplerPro first if the machine has it, else Assistant (same as Figma). */
+  --sds-font-family-base: SimplerPro, Assistant, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--sds-color-bg-surface);
+  color: var(--sds-color-text-primary);
+  font: var(--sds-text-body-regular);
+}

@@ -1,0 +1,76 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sds-space-8);
+  box-sizing: border-box;
+  padding-block: 0;
+  padding-inline: var(--sds-space-16);
+  border: 1px solid transparent;
+  border-radius: var(--sds-radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 120ms ease;
+}
+
+.label {
+  min-inline-size: 0;
+}
+
+.icon {
+  flex: none;
+}
+
+/* Sizes: Figma lg 50 (18/26), md 40 (14/24), sm 28 (12/20). */
+.lg {
+  block-size: 50px;
+  padding-inline: var(--sds-space-24);
+  font: var(--sds-text-subtitle-regular);
+}
+
+.md {
+  block-size: 40px;
+  font: var(--sds-text-body-regular);
+}
+
+.sm {
+  block-size: 28px;
+  font: var(--sds-text-caption-regular);
+}
+
+/* Variants */
+.primary {
+  background: var(--sds-color-bg-primary);
+  color: var(--sds-color-text-on-primary);
+  box-shadow: var(--sds-shadow-primary);
+}
+
+.primary:hover {
+  background: var(--sds-color-bg-primary-hover);
+}
+
+.secondary {
+  background: var(--sds-color-bg-surface);
+  border-color: var(--sds-color-border-strong);
+  color: var(--sds-color-text-primary);
+}
+
+.secondary:hover {
+  background: var(--sds-color-bg-subtle);
+}
+
+/* Focus: 2px border/focus ring inside the edge (Figma State=Focus). */
+.button:focus-visible {
+  outline: 2px solid var(--sds-color-border-focus);
+  outline-offset: -2px;
+}
+
+/* Disabled: the same for both variants (studio design, ADR-010). */
+.button:disabled {
+  background: var(--sds-color-bg-disabled-strong);
+  border-color: transparent;
+  color: var(--sds-color-text-on-disabled);
+  box-shadow: none;
+  cursor: not-allowed;
+}

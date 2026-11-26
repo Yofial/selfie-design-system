@@ -1,0 +1,96 @@
+/* Shared by Checkbox and Radio. Figma: 16px box, gap 8, label 14/24; the mark is a filled 8px square or dot. */
+.choice {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sds-space-8);
+  font: var(--sds-text-body-regular);
+  color: var(--sds-color-text-primary);
+  cursor: pointer;
+}
+
+/* The real input covers the box, so it keeps native keyboard, form and screen-reader behaviour. */
+.native {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0;
+  inline-size: 16px;
+  block-size: 16px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-50%);
+  cursor: inherit;
+}
+
+.box {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  inline-size: 16px;
+  block-size: 16px;
+  border: 1px solid var(--sds-color-border-field);
+  background: var(--sds-color-bg-surface);
+}
+
+.square {
+  border-radius: var(--sds-radius-xs);
+}
+
+.round {
+  border-radius: var(--sds-radius-pill);
+}
+
+.mark {
+  inline-size: 8px;
+  block-size: 8px;
+  background: var(--sds-color-icon-default);
+  visibility: hidden;
+}
+
+.square .mark {
+  border-radius: calc(var(--sds-radius-xs) / 2);
+}
+
+.round .mark {
+  border-radius: var(--sds-radius-pill);
+}
+
+.native:checked + .box .mark {
+  visibility: visible;
+}
+
+.choice:hover .native:not(:disabled) + .box {
+  border-color: var(--sds-color-border-strong);
+}
+
+.native:focus-visible + .box {
+  outline: 2px solid var(--sds-color-border-focus);
+  outline-offset: -2px;
+}
+
+.native:disabled + .box {
+  background: var(--sds-color-bg-disabled);
+}
+
+.native:disabled + .box .mark {
+  background: var(--sds-color-text-disabled);
+}
+
+.native:disabled ~ .label {
+  color: var(--sds-color-text-disabled);
+}
+
+.choice:has(.native:disabled) {
+  cursor: not-allowed;
+}
+
+.hiddenLabel {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
