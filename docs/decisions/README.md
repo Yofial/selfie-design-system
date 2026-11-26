@@ -15,6 +15,7 @@ Each decision we agree on gets a numbered file here. Use the short format below.
 | 009 | [Light mode first, WCAG 2.1 AA, Menora owns the library](ADR-009-light-a11y-governance.md) | accepted |
 | 010 | [Consolidated foundation values for Selfie](ADR-010-foundation-consolidation.md) | accepted |
 | 011 | [Patterns as generic blocks, and a dedicated chart palette](ADR-011-patterns-and-chart-palette.md) | accepted |
+| 012 | [PMs explore in Figma Make and finalize with the Figma agent](ADR-012-pm-ai-workflow.md) | accepted |
 
 ## Template
 
