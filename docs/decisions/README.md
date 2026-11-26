@@ -13,6 +13,7 @@ Each decision we agree on gets a numbered file here. Use the short format below.
 | 007 | [AI agent guardrails use AGENTS.md plus skills](ADR-007-ai-agent-guardrails.md) | accepted |
 | 008 | [The first release covers the whole Style Guide](ADR-008-mvp-scope.md) | accepted |
 | 009 | [Light mode first, WCAG 2.1 AA, Menora owns the library](ADR-009-light-a11y-governance.md) | accepted |
+| 010 | [Consolidated foundation values for Selfie](ADR-010-foundation-consolidation.md) | accepted |
 
 ## Template
 
