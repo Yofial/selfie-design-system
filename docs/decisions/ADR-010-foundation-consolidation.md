@@ -11,7 +11,9 @@ The Style Guide uses 3 reds, 2 greens, about 30 text styles, 14 radii and spacin
 ## Decision
 
 ### Status colors: one per role, taken from Selfie's own palette
-The fill, border and icon colors are the Selfie hues. A **text** variant, darkened just enough to reach 4.5:1, is used wherever status is written as small text.
+The fill, border and icon colors are the Selfie hues. Disabled buttons follow the studio: `bg/disabled-strong` (`#BBBBC3`) with `text/on-disabled` (white).
+
+A **text** variant, darkened just enough to reach 4.5:1, is used wherever status is written as small text.
 
 | Role | Base (fill, border, icon; text at 18px+ or bold 14px+) | Text variant (small text) | Background |
 | --- | --- | --- | --- |
@@ -34,7 +36,9 @@ Deprecated (snap to the role above): `#FF4A33` "red text", `#FD0505` "Error", `#
 - Inputs are 16px on mobile (this stops iOS zooming in).
 
 ### Radii: 5 tokens
-`radius-xs` 4 (checkbox, tag) · `radius-sm` 6 (fields, buttons) · `radius-md` 8 (dropdowns, tooltips, menus) · `radius-lg` 24 (cards, modals, sheets) · `radius-pill` 999. Other values snap to the nearest: 2→4, 5→6, 10/12→8, 16/18/30/32/40→24 (each case checked during migration).
+`radius-xs` 4 (checkbox) · `radius-sm` 6 (dropdown panels, small containers) · `radius-md` 8 (tooltips, menus, count badge) · `radius-lg` 24 (cards, modals, sheets) · `radius-pill` 999 (**buttons, tags, badges, search field**: the studio uses radius 90 for these). Text fields are underline-style and have no radius.
+
+> Correction (2026-11-26): the first version of this ADR gave buttons `radius-sm` 6. The studio's buttons and tags are fully rounded, so they use `radius-pill`. Other values snap to the nearest: 2→4, 5→6, 10/12→8, 16/18/30/32/40→24 (each case checked during migration).
 
 ### Spacing: 4-based scale
 `space-0` 0 · `space-2` 2 · `space-4` 4 · `space-8` 8 · `space-12` 12 · `space-16` 16 · `space-24` 24 · `space-32` 32 · `space-40` 40 · `space-48` 48 · `space-64` 64. Outliers snap: 6→8 (or 4), 10→8 or 12, 23→24.

@@ -20,3 +20,4 @@ ADR-009 says Menora owns the library. The library was created in **Alex's team**
 - Variables: Primitives 27 (hidden), Color 43 (mode "Selfie", all aliased to primitives), Spacing 11, Radius 5, Typography 21. All have scopes; all except raw sizes have `var(--sds-…)` code syntax.
 - Effect styles: `shadow/sm`, `shadow/lg`, `shadow/primary`.
 - Text styles: **not yet**, blocked on the SimplerPro font.
+- Components (🧩 Primitives): Button (24 variants), Link button (12), Count badge (2), Tag (2), Field (6). Icons (🎨 Foundations): 6. All bound to variables; temporary font Assistant. See [components](components/README.md).

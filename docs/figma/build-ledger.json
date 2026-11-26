@@ -1,0 +1,38 @@
+{
+  "file": "Cw9hFppHvySISBjlf6mPQ1",
+  "pages": {
+    "Cover": "0:1",
+    "Read me": "1:2",
+    "Foundations": "1:4",
+    "Primitives": "1:5",
+    "Layout": "1:6",
+    "Patterns": "1:7",
+    "Templates": "1:8",
+    "Changelog": "1:10",
+    "Archive": "1:11"
+  },
+  "variables": {
+    "color/text/on-disabled": "VariableID:6:2",
+    "color/bg/disabled-strong": "VariableID:6:3"
+  },
+  "components": {
+    "Icons section": "7:2",
+    "icon/chevron-down": "7:3",
+    "icon/chevron-left": "7:6",
+    "icon/close": "7:9",
+    "icon/search": "7:13",
+    "icon/calendar": "7:16",
+    "icon/external-link": "7:22",
+    "Button section": "8:2",
+    "Button": "8:99",
+    "Link button section": "8:100",
+    "Link button": "8:161",
+    "Count badge section": "8:162",
+    "Count badge": "8:167",
+    "Tag section": "8:168",
+    "Tag": "8:177",
+    "Field section": "10:2",
+    "Field": "10:45"
+  },
+  "tempFont": "Assistant (swap to SimplerPro when available)"
+}

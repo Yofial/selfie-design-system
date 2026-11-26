@@ -2,57 +2,191 @@
   "color": {
     "$type": "color",
     "text": {
-      "primary":     { "$value": "{primitive.color.ink.900}",    "$description": "All text by default. 10.9:1 on white." },
-      "secondary":   { "$value": "{primitive.color.ink.600}",    "$description": "Labels, meta, field titles. 5.0:1 on white." },
-      "placeholder": { "$value": "{primitive.color.ink.500}",    "$description": "Placeholders and hints, 14px+. 3.8:1 — not for essential info." },
-      "disabled":    { "$value": "{primitive.color.ink.300}",    "$description": "Disabled controls only (exempt from contrast)." },
-      "link":        { "$value": "{primitive.color.purple.500}", "$description": "Links, link buttons, selected tab. 5.9:1." },
-      "link-hover":  { "$value": "{primitive.color.purple.600}", "$description": "Hover on links." },
-      "on-primary":  { "$value": "{primitive.color.ink.900}",    "$description": "Text on the yellow primary button. 8.1:1." },
-      "inverse":     { "$value": "{primitive.color.white}",      "$description": "Text on dark or purple grounds." },
-      "error":       { "$value": "{primitive.color.red.600}",    "$description": "Error messages. 5.3:1." },
-      "success":     { "$value": "{primitive.color.green.600}",  "$description": "Success messages. 5.3:1." },
-      "warning":     { "$value": "{primitive.color.orange.600}", "$description": "Warning messages. 4.6:1." }
+      "primary": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "All text by default. 10.9:1 on white."
+      },
+      "secondary": {
+        "$value": "{primitive.color.ink.600}",
+        "$description": "Labels, meta, field titles. 5.0:1 on white."
+      },
+      "placeholder": {
+        "$value": "{primitive.color.ink.500}",
+        "$description": "Placeholders and hints, 14px+. 3.8:1 — not for essential info."
+      },
+      "disabled": {
+        "$value": "{primitive.color.ink.300}",
+        "$description": "Disabled controls only (exempt from contrast)."
+      },
+      "link": {
+        "$value": "{primitive.color.purple.500}",
+        "$description": "Links, link buttons, selected tab. 5.9:1."
+      },
+      "link-hover": {
+        "$value": "{primitive.color.purple.600}",
+        "$description": "Hover on links."
+      },
+      "on-primary": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "Text on the yellow primary button. 8.1:1."
+      },
+      "inverse": {
+        "$value": "{primitive.color.white}",
+        "$description": "Text on dark or purple grounds."
+      },
+      "error": {
+        "$value": "{primitive.color.red.600}",
+        "$description": "Error messages. 5.3:1."
+      },
+      "success": {
+        "$value": "{primitive.color.green.600}",
+        "$description": "Success messages. 5.3:1."
+      },
+      "warning": {
+        "$value": "{primitive.color.orange.600}",
+        "$description": "Warning messages. 4.6:1."
+      },
+      "on-disabled": {
+        "$value": "{primitive.color.white}",
+        "$description": "Text on the disabled button fill (studio design; disabled controls are exempt from contrast)."
+      }
     },
     "bg": {
-      "surface":        { "$value": "{primitive.color.white}",      "$description": "Cards, fields, header, modals." },
-      "surface-raised": { "$value": "{primitive.color.ink.25}",     "$description": "Focused or highlighted card." },
-      "canvas":         { "$value": "{primitive.color.ink.100}",    "$description": "Page background (studio: רקע בהיר)." },
-      "subtle":         { "$value": "{primitive.color.ink.50}",     "$description": "Icon backgrounds, table heads, insets." },
-      "muted":          { "$value": "{primitive.color.gray.100}",   "$description": "Neutral fills, skeletons." },
-      "primary":        { "$value": "{primitive.color.yellow.500}", "$description": "Primary button. One per view." },
-      "primary-hover":  { "$value": "{primitive.color.yellow.600}", "$description": "Primary button hover." },
-      "selected":       { "$value": "{primitive.color.purple.50}",  "$description": "Selected rows, chips, menu items." },
-      "accent":         { "$value": "{primitive.color.purple.500}", "$description": "Brand purple fills: active tab indicator, badges, checks." },
-      "disabled":       { "$value": "{primitive.color.gray.100}",   "$description": "Disabled control fill." },
-      "error":          { "$value": "{primitive.color.red.50}",     "$description": "Error notice / field background." },
-      "success":        { "$value": "{primitive.color.green.50}",   "$description": "Success notice background." },
-      "warning":        { "$value": "{primitive.color.yellow.50}",  "$description": "Warning notice background (to confirm with studio)." }
+      "surface": {
+        "$value": "{primitive.color.white}",
+        "$description": "Cards, fields, header, modals."
+      },
+      "surface-raised": {
+        "$value": "{primitive.color.ink.25}",
+        "$description": "Focused or highlighted card."
+      },
+      "canvas": {
+        "$value": "{primitive.color.ink.100}",
+        "$description": "Page background (studio: רקע בהיר)."
+      },
+      "subtle": {
+        "$value": "{primitive.color.ink.50}",
+        "$description": "Icon backgrounds, table heads, insets."
+      },
+      "muted": {
+        "$value": "{primitive.color.gray.100}",
+        "$description": "Neutral fills, skeletons."
+      },
+      "primary": {
+        "$value": "{primitive.color.yellow.500}",
+        "$description": "Primary button. One per view."
+      },
+      "primary-hover": {
+        "$value": "{primitive.color.yellow.600}",
+        "$description": "Primary button hover."
+      },
+      "selected": {
+        "$value": "{primitive.color.purple.50}",
+        "$description": "Selected rows, chips, menu items."
+      },
+      "accent": {
+        "$value": "{primitive.color.purple.500}",
+        "$description": "Brand purple fills: active tab indicator, badges, checks."
+      },
+      "disabled": {
+        "$value": "{primitive.color.gray.100}",
+        "$description": "Disabled control fill."
+      },
+      "disabled-strong": {
+        "$value": "{primitive.color.ink.300}",
+        "$description": "Disabled button fill (studio: Disable #BBBBC3)."
+      },
+      "error": {
+        "$value": "{primitive.color.red.50}",
+        "$description": "Error notice / field background."
+      },
+      "success": {
+        "$value": "{primitive.color.green.50}",
+        "$description": "Success notice background."
+      },
+      "warning": {
+        "$value": "{primitive.color.yellow.50}",
+        "$description": "Warning notice background (to confirm with studio)."
+      }
     },
     "border": {
-      "default":  { "$value": "{primitive.color.ink.200}",    "$description": "Card and container borders, dividers." },
-      "divider":  { "$value": "{primitive.color.ink.150}",    "$description": "Rules between list/table rows." },
-      "field":    { "$value": "{primitive.color.ink.300}",    "$description": "Field edge at rest. 1.9:1 — below WCAG 1.4.11 3:1; flagged for studio review." },
-      "strong":   { "$value": "{primitive.color.ink.900}",    "$description": "Field edge on hover, strong outlines." },
-      "focus":    { "$value": "{primitive.color.purple.500}", "$description": "Focus ring and focused field edge." },
-      "selected": { "$value": "{primitive.color.purple.500}", "$description": "Selected control edge." },
-      "error":    { "$value": "{primitive.color.red.500}",    "$description": "Field in error." },
-      "success":  { "$value": "{primitive.color.green.500}",  "$description": "Success outline." }
+      "default": {
+        "$value": "{primitive.color.ink.200}",
+        "$description": "Card and container borders, dividers."
+      },
+      "divider": {
+        "$value": "{primitive.color.ink.150}",
+        "$description": "Rules between list/table rows."
+      },
+      "field": {
+        "$value": "{primitive.color.ink.300}",
+        "$description": "Field edge at rest. 1.9:1 — below WCAG 1.4.11 3:1; flagged for studio review."
+      },
+      "strong": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "Field edge on hover, strong outlines."
+      },
+      "focus": {
+        "$value": "{primitive.color.purple.500}",
+        "$description": "Focus ring and focused field edge."
+      },
+      "selected": {
+        "$value": "{primitive.color.purple.500}",
+        "$description": "Selected control edge."
+      },
+      "error": {
+        "$value": "{primitive.color.red.500}",
+        "$description": "Field in error."
+      },
+      "success": {
+        "$value": "{primitive.color.green.500}",
+        "$description": "Success outline."
+      }
     },
     "icon": {
-      "default":    { "$value": "{primitive.color.ink.900}",    "$description": "UI icons." },
-      "secondary":  { "$value": "{primitive.color.ink.600}",    "$description": "Secondary UI icons." },
-      "accent":     { "$value": "{primitive.color.purple.500}", "$description": "Interactive / highlighted icons." },
-      "decorative": { "$value": "{primitive.color.purple.300}", "$description": "Illustrative icons, never the only cue." },
-      "inverse":    { "$value": "{primitive.color.white}",      "$description": "Icons on dark or purple grounds." },
-      "error":      { "$value": "{primitive.color.red.500}" },
-      "success":    { "$value": "{primitive.color.green.500}" },
-      "warning":    { "$value": "{primitive.color.orange.500}" }
+      "default": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "UI icons."
+      },
+      "secondary": {
+        "$value": "{primitive.color.ink.600}",
+        "$description": "Secondary UI icons."
+      },
+      "accent": {
+        "$value": "{primitive.color.purple.500}",
+        "$description": "Interactive / highlighted icons."
+      },
+      "decorative": {
+        "$value": "{primitive.color.purple.300}",
+        "$description": "Illustrative icons, never the only cue."
+      },
+      "inverse": {
+        "$value": "{primitive.color.white}",
+        "$description": "Icons on dark or purple grounds."
+      },
+      "error": {
+        "$value": "{primitive.color.red.500}"
+      },
+      "success": {
+        "$value": "{primitive.color.green.500}"
+      },
+      "warning": {
+        "$value": "{primitive.color.orange.500}"
+      }
     },
     "brand": {
-      "primary":   { "$value": "{primitive.color.yellow.500}", "$description": "Brand yellow for illustration and brand blocks." },
-      "secondary": { "$value": "{primitive.color.plum.900}",   "$description": "Deep brand purple (logo)." },
-      "illustration-bg": { "$value": "{primitive.color.ink.150}", "$description": "Illustration background." }
+      "primary": {
+        "$value": "{primitive.color.yellow.500}",
+        "$description": "Brand yellow for illustration and brand blocks."
+      },
+      "secondary": {
+        "$value": "{primitive.color.plum.900}",
+        "$description": "Deep brand purple (logo)."
+      },
+      "illustration-bg": {
+        "$value": "{primitive.color.ink.150}",
+        "$description": "Illustration background."
+      }
     }
   }
 }
