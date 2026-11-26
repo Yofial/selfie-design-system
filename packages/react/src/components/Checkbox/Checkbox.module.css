@@ -1,0 +1,12 @@
+.row { display: inline-flex; align-items: center; gap: var(--sds-space-8); cursor: pointer; font: var(--sds-text-body-regular); color: var(--sds-color-text-primary); }
+.control { appearance: none; margin: 0; inline-size: 16px; block-size: 16px; display: inline-grid; place-items: center; flex: none;
+  background: var(--sds-color-bg-surface); border: 1px solid var(--sds-color-border-field); cursor: pointer; }
+.checkbox { border-radius: var(--sds-radius-xs); } .radio { border-radius: var(--sds-radius-pill); }
+.control::after { content: ''; inline-size: 8px; block-size: 8px; background: var(--sds-color-icon-default); transform: scale(0); }
+.checkbox::after { border-radius: 2px; } .radio::after { border-radius: var(--sds-radius-pill); }
+.control:checked::after { transform: scale(1); }
+.control:hover:not(:disabled) { border-color: var(--sds-color-border-strong); }
+.control:focus-visible { outline: 2px solid var(--sds-color-border-focus); outline-offset: 2px; }
+.control:disabled { background: var(--sds-color-bg-disabled); cursor: not-allowed; }
+.control:disabled::after { background: var(--sds-color-text-disabled); }
+.control:disabled + .label { color: var(--sds-color-text-disabled); }

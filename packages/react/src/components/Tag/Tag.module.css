@@ -1,0 +1,3 @@
+.tag { display: inline-flex; align-items: center; gap: var(--sds-space-8); padding-inline: var(--sds-space-16); border-radius: var(--sds-radius-pill);
+  background: var(--sds-color-bg-surface); box-shadow: var(--sds-shadow-sm); color: var(--sds-color-text-primary); white-space: nowrap; }
+.md { block-size: 32px; font: var(--sds-text-body-regular); } .sm { block-size: 28px; font: var(--sds-text-caption-regular); }

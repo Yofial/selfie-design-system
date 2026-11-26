@@ -5,8 +5,8 @@ One source of truth for the rules that AI tools follow (ADR-012).
 | Folder | Consumer | How it gets there |
 | --- | --- | --- |
 | `figma-agent/` | Figma agent, through **library guidelines** on the Selfie DS library | Upload manually during the beta (below) |
-| `make-kit/` *(coming with the React package)* | Figma Make, through the **Selfie Make kit** | Added to the kit's guidelines folder |
-| `/AGENTS.md` *(coming)* | Developers' coding agents | Lives in the repo and the npm package |
+| `make-kit/` | Figma Make, through the **Selfie Make kit** | Copied into the kit's `guidelines/` folder (see `docs/make-kit.md`) |
+| `/AGENTS.md` | Developers' coding agents | Lives in the repo and ships in `@selfie-ds/react` |
 
 ## Upload the Figma agent guidelines
 1. Open the **Selfie DS** library file in Figma (edit access needed).

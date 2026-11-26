@@ -3,11 +3,18 @@
   "version": "0.1.0",
   "description": "Design tokens for Selfie (Menora agents portal). Source: W3C DTCG JSON.",
   "type": "module",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "exports": {
     "./css": "./dist/css/tokens.css",
     "./tokens.json": "./dist/json/tokens.json",
-    ".": { "types": "./dist/js/tokens.d.ts", "default": "./dist/js/tokens.js" }
+    ".": {
+      "types": "./dist/js/tokens.d.ts",
+      "default": "./dist/js/tokens.js"
+    },
+    "./dist/css/text.css": "./dist/css/text.css"
   },
   "scripts": {
     "build": "node scripts/build.mjs",

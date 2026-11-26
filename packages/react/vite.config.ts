@@ -1,0 +1,12 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import dts from 'vite-plugin-dts';
+
+export default defineConfig({
+  plugins: [react(), dts({ include: ['src'], exclude: ['src/**/*.stories.tsx'], rollupTypes: true })],
+  css: { modules: { generateScopedName: 'sds-[name]__[local]' } },
+  build: {
+    lib: { entry: 'src/index.ts', formats: ['es'], fileName: 'index' },
+    rollupOptions: { external: ['react', 'react-dom', 'react/jsx-runtime'] },
+  },
+});

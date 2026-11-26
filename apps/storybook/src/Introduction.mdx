@@ -1,0 +1,19 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+# Selfie DS: React
+
+Components for Selfie, Menora's agents portal. They are RTL and Hebrew-first, and every visual value comes from `@selfie-ds/tokens`.
+
+```tsx
+import '@selfie-ds/tokens/css';
+import '@selfie-ds/react/styles.css';
+import { Button, Field, DataTable } from '@selfie-ds/react';
+
+<div dir="rtl" lang="he">…</div>
+```
+
+**Rules:** one primary `Button` per view; use semantic tokens only (`--sds-color-text-*`, `--sds-space-*`, …), never hex values; every status `Badge` has words. The full rules are in `AGENTS.md`, and the Figma counterparts live in the *Selfie DS* library.
+
+*Font: SimplerPro is licensed and loads from Menora's CDN. This Storybook uses Assistant as a stand-in.*

@@ -1,0 +1,8 @@
+.nav { display: inline-flex; align-items: center; gap: var(--sds-space-4); font-family: var(--sds-font-family-base); }
+.page, .arrow { inline-size: 32px; block-size: 32px; display: inline-grid; place-items: center; border-radius: var(--sds-radius-pill); cursor: pointer;
+  background: var(--sds-color-bg-surface); border: 1px solid var(--sds-color-border-default); color: var(--sds-color-text-primary); font: var(--sds-text-body-regular); font-variant-numeric: tabular-nums; }
+.page:hover { background: var(--sds-color-bg-subtle); }
+.current, .current:hover { background: var(--sds-color-bg-primary); border-color: transparent; font-weight: var(--sds-font-weight-bold); }
+.arrow { border-color: var(--sds-color-border-strong); color: var(--sds-color-icon-default); }
+.arrow:disabled { border-color: var(--sds-color-border-default); color: var(--sds-color-text-disabled); cursor: not-allowed; }
+.page:focus-visible, .arrow:focus-visible { outline: 2px solid var(--sds-color-border-focus); outline-offset: 2px; }

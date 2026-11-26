@@ -1,0 +1,7 @@
+.card { display: flex; flex-direction: column; gap: var(--sds-space-16); padding: var(--sds-space-24); border-radius: var(--sds-radius-lg);
+  background: var(--sds-color-bg-surface); font-family: var(--sds-font-family-base); color: var(--sds-color-text-primary); }
+.elevated { box-shadow: var(--sds-shadow-lg); }
+.outlined { border: 1px solid var(--sds-color-border-default); }
+.header { display: flex; align-items: center; justify-content: space-between; gap: var(--sds-space-8); }
+.title { margin: 0; font: var(--sds-text-subtitle-bold); }
+.footer { display: flex; justify-content: flex-end; }
