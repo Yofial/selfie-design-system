@@ -111,6 +111,10 @@
       "warning": {
         "$value": "{primitive.color.yellow.50}",
         "$description": "Warning notice background (to confirm with studio)."
+      },
+      "overlay": {
+        "$value": "{primitive.color.black-a30}",
+        "$description": "Scrim behind modals and bottom sheets (with 2px background blur)."
       }
     },
     "border": {

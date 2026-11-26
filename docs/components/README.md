@@ -22,7 +22,15 @@ General rules:
 | [Tab bar](#tabs) | `Tab bar` (13:72) | — | 6 Tabs, exposed |
 | [Segmented tab](#tabs) | `Segmented tab` (13:124) | Size × State = 6 | Label, Show badge |
 | [Segmented control](#tabs) | `Segmented control` (13:125) | — | 3 Segmented tabs, exposed |
-| Icons | `icon/*` on 🎨 Foundations (7:2) | — | chevron-down, chevron-left, close, search, calendar, external-link |
+| [Badge](#badge) | `Badge` (16:150) | Tone × Size = 15 | Label, Show icon, Icon |
+| [Product badge](#badge) | `Product badge` (16:156) | Line = 2 | Label |
+| [Tooltip](#tooltip) | `Tooltip` (16:166) | Placement = 2 | Label |
+| [Pagination](#pagination) | `Pagination` (18:125) + `Page item` (18:111), `Page arrow` (18:124), `Page dots` (18:140) | — | pages and arrows exposed |
+| [Card](#card) | `Card` (18:175) | Variant = 2 | Title, Show header, Show action, Content, Show footer |
+| [Modal](#modal) | `Modal` (19:164) + `Close button` (19:123) | Size = 2 | Title, Body, Show illustration, Illustration, Show secondary, Show close |
+| [Bottom sheet](#bottom-sheet) | `Bottom sheet` (20:139) + `Overlay` (20:137) | — | Title, Show header, Content, Show footer |
+| Slot | `Slot` on 🎨 Foundations › Utilities (15:13) | — | placeholder to swap for content |
+| Icons | `icon/*` on 🎨 Foundations (7:2) | — | chevron-down, chevron-left (points left = RTL forward), chevron-right, close, search, calendar, external-link, bell |
 
 ## Button
 
@@ -107,3 +115,45 @@ There are two kinds. Don't mix them on the same level.
 | Badge | Optional Count badge (e.g. number of new items) | Optional Count badge (white on the selected tab) |
 
 RTL: the first tab is on the right and is selected by default.
+
+## Badge
+
+The **status** of a record. Every tone has a word that says the status; color is never the only cue.
+
+| Tone | Use | Background / text |
+| --- | --- | --- |
+| Warning | Pending, needs attention | `bg/warning` / `text/warning` |
+| Error | Rejected, failed, debt | `bg/error` / `text/error` |
+| Info | In process | `bg/selected` / `text/link` |
+| Success | Approved, active | `bg/success` / `text/success` |
+| Neutral | Closed, draft | `bg/muted` / `text/primary` |
+
+Sizes: lg 14 · md 12 · sm 10. There is an optional icon (bell by default). The text uses the darker, accessible text shades (ADR-010). The studio's original colored text failed 4.5:1 on these backgrounds.
+
+**Product badge**: the product line of a policy. Elementary is yellow (`bg/primary-hover`); Pension & Gemel is purple (`bg/accent` + `text/inverse`). The studio's 10px text is raised to 12px.
+
+Not yet migrated: the studio's decorative ribbon badges ("badges *NEW*": קיימת הלוואה, שיעבוד, קיים חוב, עיקול). They are gradient shapes, so they're treated as a domain pattern for a later round.
+
+## Tooltip
+
+Dark (`bg/inverse`), `radius/xs`, 12px white text, with an arrow pointing at the trigger (`Top` points down, `Bottom` points up). One short line. It appears on hover and on keyboard focus. Never put actions or essential information in it. Quick-action and notification popovers are patterns (later).
+
+## Pagination
+
+Circles of 32px. The selected page is yellow (`bg/primary`). Others are white with `border/default`. In RTL, page 1 and **Previous** are on the right (pointing right), and **Next** is on the left (pointing left). Arrows are disabled on the first and last page. Show up to 5 numbers. `Page dots` is for mobile carousels only.
+
+## Card
+
+A container for one widget or block. **Elevated** (`shadow/lg`) sits on the canvas background; **Outlined** (`border/default`) sits inside other surfaces or in dense grids. Padding `space/24`, `radius/lg`. The header has a title (18 bold) and an optional link action. For the content, swap the **Slot** for a component. The footer is optional. Never put a card inside a card.
+
+## Modal
+
+A blocking message or short decision, shown on the **Overlay**. It has an illustration (from the studio set, swapped into the slot), a centered title (24/20) and body, and one primary action (plus an optional secondary). The **Close button** is top-left. Esc and a click on the overlay close non-critical modals. Desktop is 560 wide, mobile 343. Never stack modals.
+
+## Bottom sheet
+
+Mobile only: actions, filters, selection lists and notifications. It has a grabber, a title with a close button, content (swap the Slot) and an optional sticky primary action. Top corners are `radius/lg`, with `shadow/lg`, on the Overlay. Max height is 90% of the screen; the content scrolls. On desktop use a Dropdown or Modal instead.
+
+## Slot
+
+A dashed placeholder inside Card, Modal and Bottom sheet. Swap it (property "Content" or "Illustration") for a library component, or for a local component built only from library parts. A Slot must never reach a finished screen.
