@@ -7,41 +7,49 @@
         "$value": "#FFFFFF"
       },
       "ink": {
-        "900": {
-          "$value": "#3B3B4D",
-          "$description": "Studio: Text color / Dark purple"
-        },
-        "600": {
-          "$value": "#6E6E78",
-          "$description": "ADR-010: darkened Field Title for 4.5:1"
-        },
-        "500": {
-          "$value": "#82828D",
-          "$description": "Studio: Field Title"
-        },
-        "300": {
-          "$value": "#BBBBC3",
-          "$description": "Studio: field line / disable"
-        },
-        "200": {
-          "$value": "#D8D8E2",
-          "$description": "Studio: middle gray"
-        },
-        "150": {
-          "$value": "#D9D9EB",
-          "$description": "Studio: illustration background"
-        },
-        "100": {
-          "$value": "#EFEFF7",
-          "$description": "Studio: רקע בהיר (light background)"
+        "25": {
+          "$value": "#FCFCFE",
+          "$description": "Studio: card focus"
         },
         "50": {
           "$value": "#F5F5FA",
           "$description": "Studio: Icons Background / gray light"
         },
-        "25": {
-          "$value": "#FCFCFE",
-          "$description": "Studio: card focus"
+        "100": {
+          "$value": "#EFEFF7",
+          "$description": "Studio: רקע בהיר (light background)"
+        },
+        "150": {
+          "$value": "#D9D9EB",
+          "$description": "Studio: illustration background"
+        },
+        "200": {
+          "$value": "#D8D8E2",
+          "$description": "Studio: middle gray"
+        },
+        "300": {
+          "$value": "#BBBBC3",
+          "$description": "Studio: field line / disable"
+        },
+        "500": {
+          "$value": "#82828D",
+          "$description": "Studio: Field Title"
+        },
+        "600": {
+          "$value": "#6E6E78",
+          "$description": "ADR-010: darkened Field Title for 4.5:1"
+        },
+        "650": {
+          "$value": "#6E6E8C",
+          "$description": "Darkened studio #8C8CA9 (sidebar sub-item hover) so white text reaches 4.9:1"
+        },
+        "700": {
+          "$value": "#585876",
+          "$description": "Studio: sidebar hover / sub-menu background"
+        },
+        "900": {
+          "$value": "#3B3B4D",
+          "$description": "Studio: Text color / Dark purple"
         }
       },
       "gray": {

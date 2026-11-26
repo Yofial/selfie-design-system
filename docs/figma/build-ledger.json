@@ -15,7 +15,10 @@
     "color/text/on-disabled": "VariableID:6:2",
     "color/bg/disabled-strong": "VariableID:6:3",
     "color/bg/inverse": "(created in Figma, see Color collection)",
-    "color/bg/overlay": "VariableID:15:3"
+    "color/bg/overlay": "VariableID:15:3",
+    "color/border/input": "(Color)",
+    "color/nav/*": "bg, item-hover, subitem-hover, item-active (Color)",
+    "color/ink/700, ink/650": "(Primitives)"
   },
   "components": {
     "Icons section": "7:2",
@@ -71,7 +74,34 @@
     "Bottom sheet section": "20:138",
     "Bottom sheet": "20:139",
     "Overlay section": "20:136",
-    "Overlay": "20:137"
+    "Overlay": "20:137",
+    "Search field section": "24:143",
+    "Search field": "24:172",
+    "Logos section": "23:8",
+    "Logo": "23:41",
+    "Selfie360 wordmark": "23:42",
+    "Navigation assets section": "23:48",
+    "icon/nav/digital": "23:49",
+    "icon/nav/systems": "23:56",
+    "icon/nav/school": "23:66",
+    "icon/nav/forms": "23:70",
+    "icon/nav/support": "23:79",
+    "icon/actions": "23:87",
+    "icon/menu": "23:91",
+    "Nav swoosh": "23:96",
+    "Header section (Layout)": "24:239",
+    "User menu": "24:240",
+    "Header": "24:304",
+    "Footer section": "25:51",
+    "Footer": "25:104",
+    "Sidebar section": "26:65",
+    "Sidebar item": "26:108",
+    "Sidebar icon item": "26:127",
+    "Sidebar": "26:317",
+    "Mobile menu": "26:318",
+    "Bottom navigation section": "27:253",
+    "Bottom nav item": "27:266",
+    "Bottom navigation": "27:267"
   },
   "tempFont": "Assistant (swap to SimplerPro when available)"
 }

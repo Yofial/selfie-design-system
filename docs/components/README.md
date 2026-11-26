@@ -29,8 +29,15 @@ General rules:
 | [Card](#card) | `Card` (18:175) | Variant = 2 | Title, Show header, Show action, Content, Show footer |
 | [Modal](#modal) | `Modal` (19:164) + `Close button` (19:123) | Size = 2 | Title, Body, Show illustration, Illustration, Show secondary, Show close |
 | [Bottom sheet](#bottom-sheet) | `Bottom sheet` (20:139) + `Overlay` (20:137) | — | Title, Show header, Content, Show footer |
+| [Search field](#search-field) | `Search field` (24:172) | State = 4 | Value |
+| [Header](#header) | `Header` on 🧭 Layout (24:304) + `User menu` (24:240) | Size = 2 | User menu and Search exposed |
+| [Footer](#footer) | `Footer` (25:104) | Size = 2 | — (fixed content) |
+| [Sidebar](#sidebar) | `Sidebar` (26:317) + `Sidebar item` (26:108), `Sidebar icon item` (26:127) | State = Open / Collapsed | items exposed |
+| [Mobile menu](#sidebar) | `Mobile menu` (26:318) | — | — |
+| [Bottom navigation](#bottom-navigation) | `Bottom navigation` (27:267) + `Bottom nav item` (27:266) | — | Label, Icon |
+| Logo / Selfie360 | `Logo` (23:41, Brand / White), `Selfie360 wordmark` (23:42) on 🎨 Foundations | Color = 2 | — |
 | Slot | `Slot` on 🎨 Foundations › Utilities (15:13) | — | placeholder to swap for content |
-| Icons | `icon/*` on 🎨 Foundations (7:2) | — | chevron-down, chevron-left (points left = RTL forward), chevron-right, close, search, calendar, external-link, bell |
+| Icons | `icon/*` on 🎨 Foundations (7:2, 23:48) | — | chevron-down, chevron-left (points left = RTL forward), chevron-right, close, search, calendar, external-link, bell, actions, menu; sidebar 21px: nav/digital, nav/systems, nav/school, nav/forms, nav/support |
 
 ## Button
 
@@ -157,3 +164,40 @@ Mobile only: actions, filters, selection lists and notifications. It has a grabb
 ## Slot
 
 A dashed placeholder inside Card, Modal and Bottom sheet. Swap it (property "Content" or "Illustration") for a library component, or for a local component built only from library parts. A Slot must never reach a finished screen.
+
+## Search field
+
+A boxed, pill-shaped search used for global search (insured, policy, claim) in the Header and above lists. The search icon is at the start and a clear (×) appears at the end when it has a value. Edge: `border/input` (`#82828D`, 3.8:1, passes WCAG 3:1). Results open in a Dropdown menu. Use **Field** for form inputs.
+
+# Layout (🧭 Layout page)
+
+These are app-shell components. Their content is fixed by the product. PMs place them; only the studio changes them.
+
+## Header
+
+- **Desktop** (stretch to the page width): the brand (Menora logo + Selfie360) on the right; on the left the **Search field** and the **User menu** (agent name, opens a Dropdown with switch-agent/logout). White, `shadow/sm`.
+- **Mobile** (375): the menu icon (opens **Mobile menu**) on the right, the brand in the middle, a search icon on the left.
+
+## Footer
+
+- **Desktop**: white, `border/default` top line, `shadow/sm`. Row 1 has the service links: contacts, user management, service charter, terms, accessibility (the accessibility statement link is mandatory). Row 2 has the help line and contact details.
+- **Mobile**: dark (`nav/bg`) with the white logo, the links, "יש לך בעיה? אנחנו כאן לשירותך", and the contact details.
+
+## Sidebar
+
+Desktop main navigation on the right edge (RTL), on `nav/bg` with the Menora swoosh decoration.
+
+| | |
+| --- | --- |
+| Open (176) | Level-1 items (icon + label + chevron), the current group expanded with Level-2 items |
+| Collapsed (66) | Icon-only items; the toggle at the top switches between the two states |
+| Level-1 states | Default; Hover `nav/item-hover`; Active (open/current group) `nav/item-active` with dark text and icon |
+| Level-2 states | On the `nav/item-hover` band; Hover `nav/subitem-hover`; Active = bold |
+
+New tokens `color/nav/*`. Studio's `#8C8CA9` sub-item hover was darkened to `#6E6E8C`, so white text reaches 4.9:1. Labels are one line and truncate. (With the temporary font, "תהליכים דיגיטליים" truncates; with SimplerPro it fits.)
+
+**Mobile menu**: full screen on `nav/bg`, close top-left, the same Level-1 items.
+
+## Bottom navigation
+
+A sticky white bar at the bottom of mobile screens. Today it has one entry, "פעולות" (actions), which opens the actions Bottom sheet. Each entry is a label plus a 32px icon circle; Active is purple. More entries are a studio decision (max 4).

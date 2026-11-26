@@ -23,6 +23,7 @@ function figmaEntry(t) {
       border: ['STROKE_COLOR'],
       icon: ['SHAPE_FILL', 'STROKE_COLOR'],
       brand: ['FRAME_FILL', 'SHAPE_FILL'],
+      nav: ['FRAME_FILL', 'SHAPE_FILL'],
     }[group];
     const ref = t.original.$value; // "{primitive.color.ink.900}"
     const alias = typeof ref === 'string' && ref.startsWith('{')

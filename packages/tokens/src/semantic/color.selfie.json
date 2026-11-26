@@ -130,6 +130,10 @@
         "$value": "{primitive.color.ink.300}",
         "$description": "Field edge at rest. 1.9:1 — below WCAG 1.4.11 3:1; flagged for studio review."
       },
+      "input": {
+        "$value": "{primitive.color.ink.500}",
+        "$description": "Boxed input edge at rest (search field). 3.8:1 on white, passes WCAG 1.4.11. Candidate to replace border/field (studio decision)."
+      },
       "strong": {
         "$value": "{primitive.color.ink.900}",
         "$description": "Field edge on hover, strong outlines."
@@ -194,6 +198,24 @@
       "illustration-bg": {
         "$value": "{primitive.color.ink.150}",
         "$description": "Illustration background."
+      }
+    },
+    "nav": {
+      "bg": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "Sidebar and mobile menu background. Text on it: text/inverse."
+      },
+      "item-hover": {
+        "$value": "{primitive.color.ink.700}",
+        "$description": "Sidebar item hover and the open sub-menu background. White text 6.8:1."
+      },
+      "subitem-hover": {
+        "$value": "{primitive.color.ink.650}",
+        "$description": "Sub-menu item hover. White text 4.9:1 (studio #8C8CA9 darkened)."
+      },
+      "item-active": {
+        "$value": "{primitive.color.ink.150}",
+        "$description": "Active (current) sidebar item. Text on it: text/primary (7.9:1)."
       }
     }
   }
