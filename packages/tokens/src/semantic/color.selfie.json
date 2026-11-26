@@ -88,6 +88,10 @@
         "$value": "{primitive.color.purple.500}",
         "$description": "Brand purple fills: active tab indicator, badges, checks."
       },
+      "inverse": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "Dark fill: selected segmented tab, tooltips. Text on it: text/inverse."
+      },
       "disabled": {
         "$value": "{primitive.color.gray.100}",
         "$description": "Disabled control fill."

@@ -13,7 +13,8 @@
   },
   "variables": {
     "color/text/on-disabled": "VariableID:6:2",
-    "color/bg/disabled-strong": "VariableID:6:3"
+    "color/bg/disabled-strong": "VariableID:6:3",
+    "color/bg/inverse": "(created in Figma, see Color collection)"
   },
   "components": {
     "Icons section": "7:2",
@@ -32,7 +33,19 @@
     "Tag section": "8:168",
     "Tag": "8:177",
     "Field section": "10:2",
-    "Field": "10:45"
+    "Field": "10:45",
+    "Checkbox & Radio section": "11:8",
+    "Checkbox": "11:65",
+    "Menu item section": "12:7",
+    "Menu item": "12:53",
+    "Dropdown menu section": "12:54",
+    "Dropdown menu": "12:55",
+    "Tabs section": "13:38",
+    "Tab": "13:71",
+    "Tab bar": "13:72",
+    "Segmented tabs section": "13:99",
+    "Segmented tab": "13:124",
+    "Segmented control": "13:125"
   },
   "tempFont": "Assistant (swap to SimplerPro when available)"
 }
