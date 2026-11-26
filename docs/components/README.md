@@ -267,3 +267,20 @@ These are built only from library parts to prove the blocks work.
 
 - **Data field**: a read-only label above its value, for record details.
 - **Policy row** (customer image): product name, a risk/status Badge, 4 Data fields, and an expand Icon button. When expanded, the details area is a Slot for the product's detail blocks.
+
+# Templates (📐 Templates page)
+
+Templates are the starting point for every new screen (ADR-004, ADR-012). They are library **components**, so they reach product files through the published library.
+
+| Template | Contents |
+| --- | --- |
+| **Template / Dashboard** (1440) | Header, Sidebar, greeting, 2-column widget grid: Chart card, Recent actions, 2 Cards with Slots; Footer |
+| **Template / List page** (1440) | Header, Sidebar, title, Tab bar, Filter bar, Data table with Pagination; Footer |
+| **Template / Customer image** (1440) | Header, Sidebar, customer name, customer details Card (Slot), area Tab bar, Policy rows (1 expanded); Footer |
+| **Template / Mobile list** (375) | Mobile Header, title, Search field, policy cards (Data fields), Bottom navigation |
+
+**How to use one (PMs and the Figma agent):**
+1. Insert the template from the library.
+2. **Detach once.** Only the outer shell becomes a frame; Header, Sidebar, tables and cards stay library instances. (The compliance check ignores the template's own name.)
+3. Replace every **Slot** with library parts. Change texts and properties. Remove what you don't need.
+4. Run the **compliance check** (`tools/figma-compliance`). A template with Slots still in it fails until it's filled.

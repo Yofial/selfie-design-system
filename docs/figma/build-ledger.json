@@ -131,7 +131,12 @@
     "Recent actions": "42:380",
     "Domain examples section": "42:428",
     "Data field": "42:429",
-    "Policy row": "42:494"
+    "Policy row": "42:494",
+    "Templates section": "58:2",
+    "Template / Dashboard": "58:3",
+    "Template / List page": "58:436",
+    "Template / Customer image": "58:989",
+    "Template / Mobile list": "58:1266"
   },
   "tempFont": "Assistant (swap to SimplerPro when available)"
 }
