@@ -1,0 +1,25 @@
+{
+  "space": {
+    "$type": "dimension",
+    "$description": "4-based spacing scale (ADR-010). Gaps and padding only.",
+    "0":  { "$value": "0px" },
+    "2":  { "$value": "2px" },
+    "4":  { "$value": "4px" },
+    "8":  { "$value": "8px" },
+    "12": { "$value": "12px" },
+    "16": { "$value": "16px" },
+    "24": { "$value": "24px" },
+    "32": { "$value": "32px" },
+    "40": { "$value": "40px" },
+    "48": { "$value": "48px" },
+    "64": { "$value": "64px" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "xs":   { "$value": "4px",   "$description": "Checkbox, tag" },
+    "sm":   { "$value": "6px",   "$description": "Fields, buttons" },
+    "md":   { "$value": "8px",   "$description": "Dropdowns, tooltips, menus" },
+    "lg":   { "$value": "24px",  "$description": "Cards, modals, bottom sheets" },
+    "pill": { "$value": "999px", "$description": "Badges, pills, avatars" }
+  }
+}

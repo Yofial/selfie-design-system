@@ -1,0 +1,51 @@
+{
+  "primitive": {
+    "color": {
+      "$type": "color",
+      "$description": "Raw palette. Never use directly in UI: use semantic tokens. Hidden from Figma publishing.",
+      "white": { "$value": "#FFFFFF" },
+      "ink": {
+        "900": { "$value": "#3B3B4D", "$description": "Studio: Text color / Dark purple" },
+        "600": { "$value": "#6E6E78", "$description": "ADR-010: darkened Field Title for 4.5:1" },
+        "500": { "$value": "#82828D", "$description": "Studio: Field Title" },
+        "300": { "$value": "#BBBBC3", "$description": "Studio: field line / disable" },
+        "200": { "$value": "#D8D8E2", "$description": "Studio: middle gray" },
+        "150": { "$value": "#D9D9EB", "$description": "Studio: illustration background" },
+        "100": { "$value": "#EFEFF7", "$description": "Studio: רקע בהיר (light background)" },
+        "50":  { "$value": "#F5F5FA", "$description": "Studio: Icons Background / gray light" },
+        "25":  { "$value": "#FCFCFE", "$description": "Studio: card focus" }
+      },
+      "gray": {
+        "100": { "$value": "#EEEEEE", "$description": "Studio: gray middle" }
+      },
+      "yellow": {
+        "500": { "$value": "#FFDB45", "$description": "Studio: main / Yellow new. Primary brand." },
+        "600": { "$value": "#F7C744", "$description": "Hover of primary (hard-coded in studio file)" },
+        "50":  { "$value": "#FFF9DF" }
+      },
+      "purple": {
+        "500": { "$value": "#6342F0", "$description": "Studio: Link" },
+        "600": { "$value": "#5C3FD7", "$description": "Link hover (hard-coded in studio file)" },
+        "300": { "$value": "#968CFF", "$description": "Studio: Light purple. Not for text (2.8:1)." },
+        "50":  { "$value": "#F2F0FF" }
+      },
+      "plum": {
+        "900": { "$value": "#41006C", "$description": "Studio: purple (brand / logo)" }
+      },
+      "red": {
+        "500": { "$value": "#E03D2B" },
+        "600": { "$value": "#CC2F1E", "$description": "ADR-010: text variant, 4.5:1+" },
+        "50":  { "$value": "#FFEDEB" }
+      },
+      "green": {
+        "500": { "$value": "#218F40" },
+        "600": { "$value": "#1D7C38", "$description": "ADR-010: text variant, 4.5:1+" },
+        "50":  { "$value": "#EAF5ED" }
+      },
+      "orange": {
+        "500": { "$value": "#D85E18" },
+        "600": { "$value": "#C15415", "$description": "ADR-010: text variant, 4.5:1+" }
+      }
+    }
+  }
+}

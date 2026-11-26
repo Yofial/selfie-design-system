@@ -14,3 +14,9 @@ Cover · Read me – guardrails · Foundations · Primitives · Layout · Patter
 ## Note on ownership
 
 ADR-009 says Menora owns the library. The library was created in **Alex's team**, because that is where the architect has a Full seat. If that team is not Menora's, the file has to move to Menora's organization before it is published to PMs. To be confirmed.
+
+## Library state (2026-11-26)
+
+- Variables: Primitives 27 (hidden), Color 43 (mode "Selfie", all aliased to primitives), Spacing 11, Radius 5, Typography 21. All have scopes; all except raw sizes have `var(--sds-…)` code syntax.
+- Effect styles: `shadow/sm`, `shadow/lg`, `shadow/primary`.
+- Text styles: **not yet**, blocked on the SimplerPro font.

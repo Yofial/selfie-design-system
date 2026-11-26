@@ -1,0 +1,64 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "base": { "$value": ["SimplerPro", "Arial", "sans-serif"], "$description": "The only UI typeface. Almoni Neue and Open Sans are not allowed." }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "light":   { "$value": 300 },
+      "regular": { "$value": 400 },
+      "bold":    { "$value": 700 }
+    }
+  },
+  "text": {
+    "$type": "typography",
+    "$description": "Type scale (ADR-010). Body is 14/24.",
+    "caption-sm": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "10px", "lineHeight": "18px" }, "$description": "Chart axes, legal micro text" },
+      "light":   { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.light}",   "fontSize": "10px", "lineHeight": "18px" } }
+    },
+    "caption": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "12px", "lineHeight": "20px" }, "$description": "Meta, helper text, table secondary" },
+      "light":   { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.light}",   "fontSize": "12px", "lineHeight": "20px" } },
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "12px", "lineHeight": "20px" } }
+    },
+    "body": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "14px", "lineHeight": "24px" }, "$description": "Default UI text" },
+      "light":   { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.light}",   "fontSize": "14px", "lineHeight": "24px" } },
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "14px", "lineHeight": "24px" } }
+    },
+    "body-lg": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "16px", "lineHeight": "24px" }, "$description": "Emphasised body, inputs on mobile" },
+      "light":   { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.light}",   "fontSize": "16px", "lineHeight": "24px" } },
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "16px", "lineHeight": "24px" } }
+    },
+    "subtitle": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "18px", "lineHeight": "26px" } },
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "18px", "lineHeight": "26px" }, "$description": "Card and section headings" }
+    },
+    "title-sm": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "20px", "lineHeight": "28px" } },
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "20px", "lineHeight": "28px" } }
+    },
+    "title": {
+      "regular": { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.regular}", "fontSize": "24px", "lineHeight": "32px" } },
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "24px", "lineHeight": "32px" }, "$description": "Page titles" }
+    },
+    "display": {
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "32px", "lineHeight": "40px" }, "$description": "KPIs, welcome header" }
+    },
+    "hero": {
+      "bold":    { "$value": { "fontFamily": "{font.family.base}", "fontWeight": "{font.weight.bold}",    "fontSize": "48px", "lineHeight": "56px" }, "$description": "Large figures, illustrations pages only" }
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": { "$value": [
+      { "color": "#0C1A4B3D", "offsetX": "0px", "offsetY": "0px", "blur": "1px", "spread": "0px" },
+      { "color": "#3232470D", "offsetX": "0px", "offsetY": "3px", "blur": "8px", "spread": "-1px" }
+    ], "$description": "Studio 'dropshadow': cards, fields, rows" },
+    "lg": { "$value": { "color": "#3B3B4D24", "offsetX": "0px", "offsetY": "0px", "blur": "54px", "spread": "0px" }, "$description": "Studio 'card shadow': floating cards, modals, sheets" },
+    "primary": { "$value": { "color": "#FFDB454D", "offsetX": "0px", "offsetY": "10px", "blur": "14px", "spread": "0px" }, "$description": "Studio 'button shadow': primary button only" }
+  }
+}
