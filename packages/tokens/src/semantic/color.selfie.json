@@ -217,6 +217,36 @@
         "$value": "{primitive.color.ink.150}",
         "$description": "Active (current) sidebar item. Text on it: text/primary (7.9:1)."
       }
+    },
+    "chart": {
+      "1": {
+        "$value": "{primitive.color.chart.blue}",
+        "$description": "First data series. Charts only — never for links, buttons or text."
+      },
+      "2": {
+        "$value": "{primitive.color.chart.yellow}",
+        "$description": "Second series (light: always label values)."
+      },
+      "3": {
+        "$value": "{primitive.color.chart.violet}",
+        "$description": "Third series (light: always label values)."
+      },
+      "4": {
+        "$value": "{primitive.color.ink.900}",
+        "$description": "Fourth series."
+      },
+      "5": {
+        "$value": "{primitive.color.chart.purple}",
+        "$description": "Fifth series."
+      },
+      "6": {
+        "$value": "{primitive.color.chart.lavender}",
+        "$description": "Sixth series / 'other' (light: always label values)."
+      },
+      "track": {
+        "$value": "{primitive.color.gray.100}",
+        "$description": "Empty part of a bar, ring or progress track."
+      }
     }
   }
 }

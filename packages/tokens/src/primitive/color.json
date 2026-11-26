@@ -130,6 +130,28 @@
       "black-a30": {
         "$value": "#0000004D",
         "$description": "Studio: Background overlay (black 30%)"
+      },
+      "chart": {
+        "blue": {
+          "$value": "#4A3AFF",
+          "$description": "Studio chart colour"
+        },
+        "yellow": {
+          "$value": "#F7C744",
+          "$description": "Studio chart colour"
+        },
+        "violet": {
+          "$value": "#C893FD",
+          "$description": "Studio chart colour"
+        },
+        "purple": {
+          "$value": "#8E6CF4",
+          "$description": "Studio chart colour"
+        },
+        "lavender": {
+          "$value": "#DADAEA",
+          "$description": "Studio chart colour"
+        }
       }
     }
   }
